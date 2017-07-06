@@ -11,3 +11,17 @@ As an example, consider the following table of data points containing two featur
 
 Now, given another set of data points (also called testing data), allocate these points a group by analyzing the training set. Note that the unclassified points are marked as ‘yellow’.
 ![k-nearest-neighbours2](https://user-images.githubusercontent.com/19835029/27906540-99b4abe0-6261-11e7-8041-b0de9ca3c049.png)
+
+Intuition
+If we plot these points on a graph, we may be able to locate some clusters, or groups. Now, given an unclassified point, we can assign it to a group by observing what group its nearest neighbours belong to. This means, a point close to a cluster of points classified as ‘Red’ has a higher probability of getting classified as ‘Red’.
+
+Intuitively, we can see that the first point (2.5, 7) should be classified as ‘Blue’ and the second point (5.5, 4.5) should be classified as ‘Red’.
+
+Algorithm
+Let m be the number of training data samples. Let p be an unknown point.
+
+1.  Store the training samples in an array of data points arr[]. This means each element of this array represents a tuple (x, y).
+2.  for i=0 to m:
+  Calculate Euclidean distance d(arr[i], p).
+3.  Make set S of K smallest distances obtained. Each of these distances correspond to an already classified data point.
+4.  Return the majority label among S.
