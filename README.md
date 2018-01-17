@@ -26,3 +26,8 @@ Let m be the number of training data samples. Let p be an unknown point.
   Calculate Euclidean distance d(arr[i], p).
 3.  Make set S of K smallest distances obtained. Each of these distances correspond to an already classified data point.
 4.  Return the majority label among S.
+
+# Distance Measures One Can Take
+Type of distance measure to use depends upon the experience or type of data to be processed. Some frequently used distance fucntions are
+
+![k-nearest-neighbours3](http://www.saedsayad.com/images/Clustering_distance.png)
